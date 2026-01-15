@@ -87,6 +87,7 @@
             position: relative;
             z-index: 1;
             animation: fadeInUp 1s ease-out;
+            text-align: center;
         }
 
         @keyframes fadeInUp {
@@ -136,7 +137,7 @@
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             color: var(--secondary);
             max-width: 700px;
-            margin-bottom: 2rem;
+            margin: 0 auto 2rem;
             font-weight: 300;
             animation: fadeInUp 1s ease-out 0.4s backwards;
             line-height: 1.8;
@@ -162,6 +163,7 @@
             gap: 1rem;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s backwards;
+            justify-content: center;
         }
 
         .btn {
@@ -278,49 +280,63 @@
         }
 
         /* Official language/tool colors */
-        .skill-tag[data-skill="ruby"] {
+        .skill-tag[data-skill="ruby"],
+        .tag-ruby {
             color: #CC342D;
             border-color: #CC342D;
         }
 
-        .skill-tag[data-skill="rails"] {
+        .skill-tag[data-skill="rails"],
+        .tag-rails {
             color: #CC0000;
             border-color: #CC0000;
         }
 
-        .skill-tag[data-skill="javascript"] {
+        .skill-tag[data-skill="javascript"],
+        .tag-javascript {
             color: #F7DF1E;
             border-color: #F7DF1E;
         }
 
-        .skill-tag[data-skill="html"] {
+        .skill-tag[data-skill="html"],
+        .tag-html {
             color: #E34F26;
             border-color: #E34F26;
         }
 
-        .skill-tag[data-skill="postgresql"] {
+        .skill-tag[data-skill="postgresql"],
+        .tag-postgresql {
             color: #4169E1;
             border-color: #4169E1;
         }
 
-        .skill-tag[data-skill="git"] {
+        .skill-tag[data-skill="git"],
+        .tag-git {
             color: #F05032;
             border-color: #F05032;
         }
 
-        .skill-tag[data-skill="heroku"] {
+        .skill-tag[data-skill="heroku"],
+        .tag-heroku {
             color: #430098;
             border-color: #430098;
         }
 
-        .skill-tag[data-skill="bootstrap"] {
+        .skill-tag[data-skill="bootstrap"],
+        .tag-bootstrap {
             color: #7952B3;
             border-color: #7952B3;
         }
 
-        .skill-tag[data-skill="figma"] {
+        .skill-tag[data-skill="figma"],
+        .tag-figma {
             color: #F24E1E;
             border-color: #F24E1E;
+        }
+
+        .tag-ai {
+            color: #00D9FF;
+            border-color: #00D9FF;
         }
 
         .skill-tag:hover {
@@ -409,8 +425,7 @@
             font-size: 0.75rem;
             padding: 0.3rem 0.8rem;
             background: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent);
+            border: 1px solid;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -566,9 +581,11 @@
                     <h3>Side-B</h3>
                     <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features authentication, CRUD operations, PostgreSQL database, and team collaboration.</p>
                     <div class="project-tags">
-                        <span class="project-tag">Ruby on Rails</span>
-                        <span class="project-tag">PostgreSQL</span>
-                        <span class="project-tag">Bootstrap</span>
+                        <span class="project-tag tag-rails">Ruby on Rails</span>
+                        <span class="project-tag tag-postgresql">PostgreSQL</span>
+                        <span class="project-tag tag-bootstrap">Bootstrap</span>
+                        <span class="project-tag tag-heroku">Heroku</span>
+                        <span class="project-tag tag-ai">AI Integration</span>
                     </div>
                     <a href="https://www.side-b.app" target="_blank" class="project-link">View Project →</a>
                 </div>
@@ -582,9 +599,11 @@
                     <h3>AI News</h3>
                     <p>AI-powered news platform built as an MVP during a 5-day group project. Aggregates and curates the latest AI news using modern web technologies.</p>
                     <div class="project-tags">
-                        <span class="project-tag">Ruby on Rails</span>
-                        <span class="project-tag">AI Integration</span>
-                        <span class="project-tag">Heroku</span>
+                        <span class="project-tag tag-rails">Ruby on Rails</span>
+                        <span class="project-tag tag-ai">AI Integration</span>
+                        <span class="project-tag tag-postgresql">PostgreSQL</span>
+                        <span class="project-tag tag-bootstrap">Bootstrap</span>
+                        <span class="project-tag tag-heroku">Heroku</span>
                     </div>
                     <a href="https://ai-news.live" target="_blank" class="project-link">View Project →</a>
                 </div>
