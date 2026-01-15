@@ -116,6 +116,7 @@
             color: var(--accent);
             position: relative;
             text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+            white-space: nowrap;
         }
 
         .glitch {
@@ -268,16 +269,61 @@
         .skill-tag {
             padding: 0.5rem 1.2rem;
             background: var(--card-bg);
-            border: 1px solid var(--border);
+            border: 1px solid;
             font-size: 0.85rem;
             transition: all 0.3s ease;
-            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Official language/tool colors */
+        .skill-tag[data-skill="ruby"] {
+            color: #CC342D;
+            border-color: #CC342D;
+        }
+
+        .skill-tag[data-skill="rails"] {
+            color: #CC0000;
+            border-color: #CC0000;
+        }
+
+        .skill-tag[data-skill="javascript"] {
+            color: #F7DF1E;
+            border-color: #F7DF1E;
+        }
+
+        .skill-tag[data-skill="html"] {
+            color: #E34F26;
+            border-color: #E34F26;
+        }
+
+        .skill-tag[data-skill="postgresql"] {
+            color: #4169E1;
+            border-color: #4169E1;
+        }
+
+        .skill-tag[data-skill="git"] {
+            color: #F05032;
+            border-color: #F05032;
+        }
+
+        .skill-tag[data-skill="heroku"] {
+            color: #430098;
+            border-color: #430098;
+        }
+
+        .skill-tag[data-skill="bootstrap"] {
+            color: #7952B3;
+            border-color: #7952B3;
+        }
+
+        .skill-tag[data-skill="figma"] {
+            color: #F24E1E;
+            border-color: #F24E1E;
         }
 
         .skill-tag:hover {
-            border-color: var(--accent);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
             background: rgba(0, 255, 136, 0.05);
@@ -309,14 +355,27 @@
 
         .project-image {
             width: 100%;
-            height: 200px;
+            height: 250px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+            position: relative;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
             color: var(--accent);
-            border-bottom: 1px solid var(--border);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
         }
 
         .project-content {
@@ -433,6 +492,10 @@
             section {
                 padding: 3rem 1.5rem;
             }
+
+            .accent-text {
+                white-space: normal;
+            }
         }
 
         /* Scroll animations */
@@ -480,15 +543,15 @@
             </div>
         </div>
         <div class="skills">
-            <span class="skill-tag">Ruby</span>
-            <span class="skill-tag">Ruby on Rails</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML5 & CSS3</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Heroku</span>
-            <span class="skill-tag">Bootstrap</span>
-            <span class="skill-tag">Figma</span>
+            <span class="skill-tag" data-skill="ruby">Ruby</span>
+            <span class="skill-tag" data-skill="rails">Ruby on Rails</span>
+            <span class="skill-tag" data-skill="javascript">JavaScript</span>
+            <span class="skill-tag" data-skill="html">HTML5 & CSS3</span>
+            <span class="skill-tag" data-skill="postgresql">PostgreSQL</span>
+            <span class="skill-tag" data-skill="git">Git & GitHub</span>
+            <span class="skill-tag" data-skill="heroku">Heroku</span>
+            <span class="skill-tag" data-skill="bootstrap">Bootstrap</span>
+            <span class="skill-tag" data-skill="figma">Figma</span>
         </div>
     </section>
 
@@ -496,7 +559,9 @@
         <h2>Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
-                <div class="project-image">🎵</div>
+                <div class="project-image">
+                    <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/sideb-screenshot.png" alt="Side-B Project" onerror="this.parentElement.innerHTML='🎵'">
+                </div>
                 <div class="project-content">
                     <h3>Side-B</h3>
                     <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features authentication, CRUD operations, PostgreSQL database, and team collaboration.</p>
@@ -510,7 +575,9 @@
             </div>
 
             <div class="project-card fade-in">
-                <div class="project-image">🤖</div>
+                <div class="project-image">
+                    <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/ainews-screenshot.png" alt="AI News Project" onerror="this.parentElement.innerHTML='🤖'">
+                </div>
                 <div class="project-content">
                     <h3>AI News</h3>
                     <p>AI-powered news platform built as an MVP during a 5-day group project. Aggregates and curates the latest AI news using modern web technologies.</p>
