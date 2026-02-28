@@ -536,6 +536,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .skills-title {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.skills-title::before {
+    content: '> ';
+    color: var(--accent);
+}
     </style>
 </head>
 <body>
@@ -569,6 +584,8 @@
                 </p>
             </div>
         </div>
+        <h3 class="skills-title">Languages & Tools</h3>
+        
         <div class="skills">
             <span class="skill-tag" data-skill="ruby">Ruby</span>
             <span class="skill-tag" data-skill="rails">Ruby on Rails</span>
