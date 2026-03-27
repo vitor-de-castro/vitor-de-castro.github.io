@@ -468,6 +468,14 @@
             text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
         }
 
+        /* NEW: Makes the entire card clickable */
+        .project-link-wrapper {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
         /* Contact section */
         .contact-content {
             text-align: center;
@@ -548,31 +556,32 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .skills-title {
-    margin-top: 6.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-    color: #00FF88;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-}
 
-.skills-title::before {
-    content: '> ';
-    color: var(--accent);
-}
-.skills-title::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: var(--accent);
-    box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
-}
+        .skills-title {
+            margin-top: 6.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: #00FF88;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .skills-title::before {
+            content: '> ';
+            color: var(--accent);
+        }
+        .skills-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -628,62 +637,69 @@
     <section id="projects">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
+            <!-- Project 1 -->
             <div class="project-card fade-in">
-                <div class="project-image">
-                    <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/sideb-screenshot.png" alt="Side-B Project" onerror="this.parentElement.innerHTML='🎵'">
-                </div>
-                <div class="project-content">
-                    <h3>Side-B</h3>
-                    <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features AI assistence and recommendations, REST API, CRUD operations, PostgreSQL database, and team collaboration.</p>
-                    <div class="project-tags">
-                        <span class="project-tag tag-rails">Ruby on Rails</span>
-                        <span class="project-tag tag-ai">AI Integration</span>
-                        <span class="project-tag tag-postgresql">PostgreSQL</span>
-                        <span class="project-tag tag-bootstrap">Bootstrap</span>
-                        <span class="project-tag tag-heroku">Heroku</span>
-                        
+                <a href="https://www.side-b.app" target="_blank" class="project-link-wrapper">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/sideb-screenshot.png" alt="Side-B Project" onerror="this.parentElement.innerHTML='🎵'">
                     </div>
-                    <a href="https://www.side-b.app" target="_blank" class="project-link">View Project →</a>
-                </div>
+                    <div class="project-content">
+                        <h3>Side-B</h3>
+                        <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features AI assistence and recommendations, REST API, CRUD operations, PostgreSQL database, and team collaboration.</p>
+                        <div class="project-tags">
+                            <span class="project-tag tag-rails">Ruby on Rails</span>
+                            <span class="project-tag tag-ai">AI Integration</span>
+                            <span class="project-tag tag-postgresql">PostgreSQL</span>
+                            <span class="project-tag tag-bootstrap">Bootstrap</span>
+                            <span class="project-tag tag-heroku">Heroku</span>
+                        </div>
+                        <span class="project-link">View Project →</span>
+                    </div>
+                </a>
             </div>
 
+            <!-- Project 2 -->
             <div class="project-card fade-in">
-    <div class="project-image">
-        <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/networth-screenshot.png" 
-             alt="Networth Project" 
-             onerror="this.parentElement.innerHTML='💰'">
-    </div>
-    <div class="project-content">
-        <h3>Networth</h3>
-        <p>Personal finance tracker that helps users monitor assets, liabilities, and calculate real-time net worth. Built with Ruby on Rails, featuring clean dashboard visualizations, API caching, Model callbacks, CRUD for accounts/transactions, secure authentication, and PostgreSQL backend.</p>
-        <div class="project-tags">
-            <span class="project-tag tag-rails">Ruby on Rails</span>
-            <span class="project-tag tag-javascript">JavaScript</span>
-            <span class="project-tag tag-ai">AI Integration</span>
-            <span class="project-tag tag-postgresql">PostgreSQL</span>
-            <span class="project-tag tag-heroku">Heroku</span>
-            
-        </div>
-        <a href="https://networth.cv" target="_blank" class="project-link">View Project →</a>
-    </div>
-</div>
-            
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/ainews-screenshot.png" alt="AI News Project" onerror="this.parentElement.innerHTML='🤖'">
-                </div>
-                <div class="project-content">
-                    <h3>AI News</h3>
-                    <p>AI-powered news platform built as an MVP during a 5-day group project. Aggregates and curates the latest news using REST API and AI.</p>
-                    <div class="project-tags">
-                        <span class="project-tag tag-rails">Ruby on Rails</span>
-                        <span class="project-tag tag-ai">AI Integration</span>
-                        <span class="project-tag tag-postgresql">PostgreSQL</span>
-                        <span class="project-tag tag-bootstrap">Bootstrap</span>
-                        <span class="project-tag tag-heroku">Heroku</span>
+                <a href="https://networth.cv" target="_blank" class="project-link-wrapper">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/networth-screenshot.png" 
+                             alt="Networth Project" 
+                             onerror="this.parentElement.innerHTML='💰'">
                     </div>
-                    <a href="https://ai-news.live" target="_blank" class="project-link">View Project →</a>
-                </div>
+                    <div class="project-content">
+                        <h3>Networth</h3>
+                        <p>Personal finance tracker that helps users monitor assets, liabilities, and calculate real-time net worth. Built with Ruby on Rails, featuring clean dashboard visualizations, API caching, Model callbacks, CRUD for accounts/transactions, secure authentication, and PostgreSQL backend.</p>
+                        <div class="project-tags">
+                            <span class="project-tag tag-rails">Ruby on Rails</span>
+                            <span class="project-tag tag-javascript">JavaScript</span>
+                            <span class="project-tag tag-ai">AI Integration</span>
+                            <span class="project-tag tag-postgresql">PostgreSQL</span>
+                            <span class="project-tag tag-heroku">Heroku</span>
+                        </div>
+                        <span class="project-link">View Project →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card fade-in">
+                <a href="https://ai-news.live" target="_blank" class="project-link-wrapper">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/vitor-de-castro/vitor-de-castro.github.io/main/ainews-screenshot.png" alt="AI News Project" onerror="this.parentElement.innerHTML='🤖'">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI News</h3>
+                        <p>AI-powered news platform built as an MVP during a 5-day group project. Aggregates and curates the latest news using REST API and AI.</p>
+                        <div class="project-tags">
+                            <span class="project-tag tag-rails">Ruby on Rails</span>
+                            <span class="project-tag tag-ai">AI Integration</span>
+                            <span class="project-tag tag-postgresql">PostgreSQL</span>
+                            <span class="project-tag tag-bootstrap">Bootstrap</span>
+                            <span class="project-tag tag-heroku">Heroku</span>
+                        </div>
+                        <span class="project-link">View Project →</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
