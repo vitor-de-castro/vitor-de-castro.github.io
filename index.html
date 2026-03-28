@@ -91,14 +91,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -247,12 +241,38 @@
             box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
 
-        /* Skills section improvements */
+        /* Skills section - now styled like other sections */
+        .skills-title {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin: 4rem 0 2rem;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+        }
+
+        .skills-title::before {
+            content: '> ';
+            color: var(--accent);
+        }
+
+        .skills-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
-            margin-top: 2rem;
         }
 
         .skill-group h3 {
@@ -281,23 +301,51 @@
             font-weight: 500;
         }
 
-        /* Skill colors */
-        .skill-tag[data-skill="ruby"] { color: #ff0064; border-color: #ff0064; }
-        .skill-tag[data-skill="rails"] { color: #ff003d; border-color: #ff003d; }
-        .skill-tag[data-skill="javascript"] { color: #F7DF1E; border-color: #F7DF1E; }
-        .skill-tag[data-skill="html"] { color: #ff7d58; border-color: #ff7d58; }
-        .skill-tag[data-skill="css"] { color: #24a3ff; border-color: #24a3ff; }
-        .skill-tag[data-skill="postgresql"] { color: #4169E1; border-color: #4169E1; }
-        .skill-tag[data-skill="sqlite"] { color: #00d9ff; border-color: #00d9ff; }
-        .skill-tag[data-skill="git"] { color: #F05032; border-color: #F05032; }
-        .skill-tag[data-skill="github"] { color: #ffffff; border-color: #ffffff; }
-        .skill-tag[data-skill="heroku"] { color: #790fff; border-color: #790fff; }
-        .skill-tag[data-skill="bootstrap"] { color: #b482ff; border-color: #b482ff; }
-        .skill-tag[data-skill="postman"] { color: #FF6C37; border-color: #FF6C37; }
-        .skill-tag[data-skill="figma"] { color: #fdab94; border-color: #fdab94; }
-        .tag-ai { color: #00D9FF; border-color: #00D9FF; }
+        /* Skill & Project Tag Colors (shared) */
+        .skill-tag[data-skill="ruby"],
+        .project-tag.tag-ruby { color: #ff0064; border-color: #ff0064; }
 
-        .skill-tag:hover {
+        .skill-tag[data-skill="rails"],
+        .project-tag.tag-rails { color: #ff003d; border-color: #ff003d; }
+
+        .skill-tag[data-skill="javascript"],
+        .project-tag.tag-javascript { color: #F7DF1E; border-color: #F7DF1E; }
+
+        .skill-tag[data-skill="html"],
+        .project-tag.tag-html { color: #ff7d58; border-color: #ff7d58; }
+
+        .skill-tag[data-skill="css"],
+        .project-tag.tag-css { color: #24a3ff; border-color: #24a3ff; }
+
+        .skill-tag[data-skill="postgresql"],
+        .project-tag.tag-postgresql { color: #4169E1; border-color: #4169E1; }
+
+        .skill-tag[data-skill="sqlite"],
+        .project-tag.tag-sqlite { color: #00d9ff; border-color: #00d9ff; }
+
+        .skill-tag[data-skill="git"],
+        .project-tag.tag-git { color: #F05032; border-color: #F05032; }
+
+        .skill-tag[data-skill="github"],
+        .project-tag.tag-github { color: #ffffff; border-color: #ffffff; }
+
+        .skill-tag[data-skill="heroku"],
+        .project-tag.tag-heroku { color: #790fff; border-color: #790fff; }
+
+        .skill-tag[data-skill="bootstrap"],
+        .project-tag.tag-bootstrap { color: #b482ff; border-color: #b482ff; }
+
+        .skill-tag[data-skill="postman"],
+        .project-tag.tag-postman { color: #FF6C37; border-color: #FF6C37; }
+
+        .skill-tag[data-skill="figma"],
+        .project-tag.tag-figma { color: #fdab94; border-color: #fdab94; }
+
+        .skill-tag.tag-ai,
+        .project-tag.tag-ai { color: #00D9FF; border-color: #00D9FF; }
+
+        .skill-tag:hover,
+        .project-tag:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
             background: rgba(0, 255, 136, 0.05);
@@ -520,7 +568,6 @@
         </div>
     </header>
 
-    <!-- Projects Section - Moved up -->
     <section id="projects">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
@@ -591,7 +638,6 @@
         </div>
     </section>
 
-    <!-- About Section - Now comes after Projects -->
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
@@ -609,10 +655,9 @@
             </div>
         </div>
 
-        <!-- Grouped Skills -->
-        <h3 class="skills-title" style="margin-top: 4rem;">Languages & Tools</h3>
+        <!-- Grouped Skills with matching section style -->
+        <h3 class="skills-title">Languages & Tools</h3>
         <div class="skills-container">
-            
             <div class="skill-group">
                 <h3>Languages</h3>
                 <div class="skills">
@@ -650,7 +695,6 @@
                     <span class="skill-tag tag-ai">AI Integration</span>
                 </div>
             </div>
-
         </div>
     </section>
 
