@@ -515,7 +515,7 @@
 /* Live Badge */
  .live-badge {
 	 position: absolute;
-	 top: 1;
+	 top: 1px;
 	 right: 1px;
 	 background: #0f8;
 	 color: #000 !important;
