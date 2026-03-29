@@ -515,14 +515,14 @@
 /* Live Badge */
  .live-badge {
 	 position: absolute;
-	 top: 3px;
-	 right: 3px;
+	 top: 0px;
+	 right: 0px;
 	 background: #0f8;
 	 color: #000 !important;
 	 font-size: 0.72rem;
 	 font-weight: 700;
 	 padding: 5px 12px;
-	 border-radius: 3px;
+	 border-radius: 1px;
 	 text-transform: uppercase;
 	 letter-spacing: 1px;
 	 box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
