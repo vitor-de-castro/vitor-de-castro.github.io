@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the compiled CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +29,7 @@
     <section id="projects">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
-
+            <!-- Project 1 -->
             <div class="project-card fade-in">
                 <a href="https://www.side-b.app" target="_blank" class="project-link-wrapper">
                     <div class="project-image">
@@ -35,7 +37,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Side-B</h3>
-                        <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features AI assistence and recommendations, REST API, CRUD operations, PostgreSQL database, and team collaboration.</p>
+                        <p>Vinyl collector web app built with Ruby on Rails for the Le Wagon bootcamp final project. Features AI assistance and recommendations, REST API, CRUD operations, PostgreSQL database, and team collaboration.</p>
                         <div class="project-tags">
                             <span class="project-tag tag-rails">Ruby on Rails</span>
                             <span class="project-tag tag-ai">AI Integration</span>
@@ -43,11 +45,12 @@
                             <span class="project-tag tag-bootstrap">Bootstrap</span>
                             <span class="project-tag tag-heroku">Heroku</span>
                         </div>
-                        <a href="https://www.side-b.app" target="_blank" class="project-link">View Project →</a>
+                        <span class="project-link">View Project →</span>
                     </div>
                 </a>
             </div>
 
+            <!-- Project 2 -->
             <div class="project-card fade-in">
                 <a href="https://networth.cv" target="_blank" class="project-link-wrapper">
                     <div class="project-image">
@@ -65,11 +68,12 @@
                             <span class="project-tag tag-postgresql">PostgreSQL</span>
                             <span class="project-tag tag-heroku">Heroku</span>
                         </div>
-                        <a href="https://networth.cv" target="_blank" class="project-link">View Project →</a>
+                        <span class="project-link">View Project →</span>
                     </div>
                 </a>
             </div>
 
+            <!-- Project 3 -->
             <div class="project-card fade-in">
                 <a href="https://ai-news.live" target="_blank" class="project-link-wrapper">
                     <div class="project-image">
@@ -85,11 +89,10 @@
                             <span class="project-tag tag-bootstrap">Bootstrap</span>
                             <span class="project-tag tag-heroku">Heroku</span>
                         </div>
-                        <a href="https://ai-news.live" target="_blank" class="project-link">View Project →</a>
+                        <span class="project-link">View Project →</span>
                     </div>
                 </a>
             </div>
-
         </div>
     </section>
 
@@ -110,7 +113,8 @@
             </div>
         </div>
 
-        <h3 class="skills-title">Tech Stack</h3>
+        <!-- Grouped Skills -->
+        <h3 class="skills-title">Languages & Tools</h3>
         <div class="skills-container">
             <div class="skill-group">
                 <h3>Languages</h3>
@@ -199,7 +203,5 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
-</body>
-</html>
 </body>
 </html>
