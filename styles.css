@@ -30,7 +30,7 @@
 	 pointer-events: none;
 	 z-index: 9999;
 }
-/* Header styles */
+/* Header */
  header {
 	 min-height: 100vh;
 	 display: flex;
@@ -59,7 +59,6 @@
 		 transform: translate(50px, 50px);
 	}
 }
-/* Hero */
  .hero-content {
 	 max-width: 900px;
 	 padding: 2rem;
@@ -93,6 +92,7 @@
 	 color: var(--accent);
 	 position: relative;
 	 text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+	 white-space: nowrap;
 }
  .glitch {
 	 position: relative;
@@ -188,7 +188,13 @@
  .btn-secondary::before {
 	 background: var(--primary);
 }
-/* Common section heading */
+/* Section styling */
+ section {
+	 padding: 5rem 2rem;
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 position: relative;
+}
  h2 {
 	 font-family: 'Space Mono', monospace;
 	 font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -213,7 +219,7 @@
 	 background: var(--accent);
 	 box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
-/* Skills */
+/* Skills section */
  .skills-title {
 	 font-family: 'Space Mono', monospace;
 	 font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -266,7 +272,7 @@
 	 letter-spacing: 1px;
 	 font-weight: 500;
 }
-/* Colors for skills and project tags */
+/* Skill & Project Tag Colors */
  .skill-tag[data-skill="ruby"], .project-tag.tag-ruby {
 	 color: #ff0064;
 	 border-color: #ff0064;
@@ -336,7 +342,7 @@
 	 box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
 	 background: rgba(0, 255, 136, 0.05);
 }
-/* Projects */
+/* Projects section */
  #projects {
 	 background: #000;
 }
@@ -362,6 +368,12 @@
 	 overflow: hidden;
 	 border-bottom: 1px solid var(--border);
 	 position: relative;
+	 background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 3rem;
+	 color: var(--accent);
 }
  .project-image img {
 	 width: 100%;
@@ -421,11 +433,12 @@
  .project-link:hover {
 	 text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
-/* About, Contact, Footer */
+/* About, Contact, Footer, Responsive, Animations */
  .about-content {
 	 display: grid;
 	 grid-template-columns: 1fr;
 	 gap: 2rem;
+	 align-items: start;
 }
  .about-text {
 	 font-size: 1rem;
@@ -498,21 +511,5 @@
  .fade-in.visible {
 	 opacity: 1;
 	 transform: translateY(0);
-}
-/* Live Badge */
- .live-badge {
-	 position: absolute;
-	 top: 12px;
-	 right: 12px;
-	 background: #0f8;
-	 color: #000;
-	 font-size: 0.75rem;
-	 font-weight: 700;
-	 padding: 5px 12px;
-	 border-radius: 20px;
-	 text-transform: uppercase;
-	 letter-spacing: 1px;
-	 box-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
-	 z-index: 2;
 }
  
