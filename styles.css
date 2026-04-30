@@ -356,6 +356,14 @@
 	 color: #fff;
 	 border-color: #fff;
 }
+ .skill-tag[data-skill="react"], .project-tag.tag-react {
+	 color: #61dafb;
+	 border-color: #61dafb;
+}
+ .skill-tag[data-skill="tailwind"], .project-tag.tag-tailwind {
+	 color: #06b6d4;
+	 border-color: #06b6d4;
+}
  .skill-tag:hover, .project-tag:hover {
 	 transform: translateY(-2px);
 	 box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
