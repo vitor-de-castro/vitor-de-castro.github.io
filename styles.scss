@@ -315,6 +315,8 @@ h2::after {
 .skill-tag[data-skill="typescript"], .project-tag.tag-typescript { color: #3178c6; border-color: #3178c6; }
 .skill-tag[data-skill="graphql"], .project-tag.tag-graphql { color: #e535ab; border-color: #e535ab; }
 .skill-tag[data-skill="vercel"], .project-tag.tag-vercel { color: #ffffff; border-color: #ffffff; }
+.skill-tag[data-skill="react"], .project-tag.tag-react { color: #61dafb; border-color: #61dafb; }
+.skill-tag[data-skill="tailwind"], .project-tag.tag-tailwind { color: #06b6d4; border-color: #06b6d4; }
 
 .skill-tag:hover, .project-tag:hover {
     transform: translateY(-2px);
