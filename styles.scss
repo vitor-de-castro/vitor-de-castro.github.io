@@ -311,6 +311,10 @@ h2::after {
 .skill-tag.tag-ai, .project-tag.tag-ai { color: #00D9FF; border-color: #00D9FF; }
 .skill-tag[data-skill="stimulus"] { color: #4FD1C5; border-color: #4FD1C5; }
 .skill-tag[data-skill="turbo"] { color: #FF4500; border-color: #FF4500; }
+.skill-tag[data-skill="nextjs"], .project-tag.tag-nextjs { color: #ffffff; border-color: #ffffff; }
+.skill-tag[data-skill="typescript"], .project-tag.tag-typescript { color: #3178c6; border-color: #3178c6; }
+.skill-tag[data-skill="graphql"], .project-tag.tag-graphql { color: #e535ab; border-color: #e535ab; }
+.skill-tag[data-skill="vercel"], .project-tag.tag-vercel { color: #ffffff; border-color: #ffffff; }
 
 .skill-tag:hover, .project-tag:hover {
     transform: translateY(-2px);
