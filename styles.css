@@ -329,8 +329,8 @@
 	 border-color: #fdab94;
 }
  .skill-tag.tag-ai, .project-tag.tag-ai {
-	 color: #00d9ff;
-	 border-color: #00d9ff;
+	 color: #0fb;
+	 border-color: #0fb;
 }
  .skill-tag[data-skill="stimulus"] {
 	 color: #4fd1c5;
