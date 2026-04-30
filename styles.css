@@ -340,6 +340,22 @@
 	 color: #ff4500;
 	 border-color: #ff4500;
 }
+ .skill-tag[data-skill="nextjs"], .project-tag.tag-nextjs {
+	 color: #fff;
+	 border-color: #fff;
+}
+ .skill-tag[data-skill="typescript"], .project-tag.tag-typescript {
+	 color: #3178c6;
+	 border-color: #3178c6;
+}
+ .skill-tag[data-skill="graphql"], .project-tag.tag-graphql {
+	 color: #e535ab;
+	 border-color: #e535ab;
+}
+ .skill-tag[data-skill="vercel"], .project-tag.tag-vercel {
+	 color: #fff;
+	 border-color: #fff;
+}
  .skill-tag:hover, .project-tag:hover {
 	 transform: translateY(-2px);
 	 box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
@@ -540,5 +556,4 @@
 		 padding: 4px 10px;
 	}
 }
- 
  
