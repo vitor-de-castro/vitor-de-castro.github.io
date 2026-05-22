@@ -364,6 +364,10 @@
 	 color: #06b6d4;
 	 border-color: #06b6d4;
 }
+ .skill-tag[data-skill="redis"], .project-tag.tag-redis {
+	 color: #dc382d;
+	 border-color: #dc382d;
+}
  .skill-tag:hover, .project-tag:hover {
 	 transform: translateY(-2px);
 	 box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
@@ -564,4 +568,5 @@
 		 padding: 4px 10px;
 	}
 }
+ 
  
