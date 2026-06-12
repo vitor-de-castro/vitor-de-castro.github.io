@@ -22,12 +22,14 @@
             color: #00ff88;
             font-size: 1.2rem;
             cursor: pointer;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
-            transition: all 0.3s ease;
             font-family: 'JetBrains Mono', monospace;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease, background 0.3s ease, box-shadow 0.3s ease;
         }
         #back-to-top:hover {
             background: #00ff88;
@@ -35,7 +37,8 @@
             box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
         }
         #back-to-top.visible {
-            display: flex;
+            opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
@@ -273,15 +276,22 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Back to top button
+        // Back to top button — appears when About Me section is visible
         const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 400) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
+        const aboutSection = document.getElementById('about');
+
+        const backToTopObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    backToTop.classList.add('visible');
+                } else if (entry.boundingClientRect.top > 0) {
+                    backToTop.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        backToTopObserver.observe(aboutSection);
+
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
