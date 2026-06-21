@@ -310,6 +310,8 @@ h2 {
 .skill-tag[data-skill="react"], .project-tag.tag-react { color: #61dafb; border-color: #61dafb; }
 .skill-tag[data-skill="tailwind"], .project-tag.tag-tailwind { color: #06b6d4; border-color: #06b6d4; }
 .skill-tag[data-skill="redis"], .project-tag.tag-redis { color: #dc382d; border-color: #dc382d; }
+.skill-tag[data-skill="docker"], .project-tag.tag-docker { color: #2496ED; border-color: #2496ED; }
+.skill-tag[data-skill="cicd"], .project-tag.tag-cicd { color: #2088FF; border-color: #2088FF; }
 
 .skill-tag, .project-tag {
     &:hover {
